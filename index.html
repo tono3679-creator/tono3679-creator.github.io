@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ゆー Portfolio</title>
+<meta name="description" content="中小企業の現場の仕事を、ひとつの画面にまとめる業務システムを作っています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f3; --surface:#ffffff; --text:#1d1d1f; --muted:#5f5f66; --line:#e3e1dc;
+  --accent:#1f6f5c; --accent-soft:#e3f0ec; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141516; --surface:#1d1f21; --text:#ececec; --muted:#a2a4a8; --line:#2e3134;
+    --accent:#5cc3a6; --accent-soft:#1d3530; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141516; --surface:#1d1f21; --text:#ececec; --muted:#a2a4a8; --line:#2e3134;
+  --accent:#5cc3a6; --accent-soft:#1d3530; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:Inter,sans-serif;font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--text)}
+nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-size:14px}
+nav a:hover{color:var(--text)}
+.hero{padding:96px 0 72px}
+.eyebrow{font-family:Inter,sans-serif;color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.4;margin:0 0 20px;font-weight:700}
+.hero p{color:var(--muted);max-width:620px;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.btn.primary{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0d1f1a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0d1f1a}}
+.btn.ghost{border:1px solid var(--line);color:var(--text)}
+section{padding:56px 0}
+h2{font-size:24px;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 36px}
+.work{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:40px}
+.work .shot{background:var(--accent-soft);padding:24px 24px 0}
+.work .shot img{border-radius:10px 10px 0 0;box-shadow:var(--shadow)}
+.work .body{padding:28px}
+.work h3{font-size:22px;margin:0 0 4px}
+.work .tagline{color:var(--accent);font-weight:500;margin:0 0 14px}
+.work ul{padding-left:1.2em;margin:0 0 18px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.tags li{font-size:12px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-family:Inter,"Noto Sans JP",sans-serif}
+.gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:0 0 20px}
+.gallery img{border-radius:8px;border:1px solid var(--line);height:100%;object-fit:cover;object-position:left top}
+.links{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:720px){
+  nav a{margin-left:14px}
+  .hero{padding:64px 0 48px}
+  .gallery,.about{grid-template-columns:1fr}
+  .work .shot{padding:16px 16px 0}
+  .work .body{padding:20px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">YU / Portfolio</a>
+    <nav><a href="#works">作品</a><a href="#about">自己紹介</a><a href="#contact">連絡先</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">Web Application Developer</p>
+    <h1>現場の仕事を、<br>ひとつの画面にまとめる。</h1>
+    <p>Excel・紙・ホワイトボードで回っている中小企業の業務を、だれでも使える Web アプリに置き換える仕組みを作っています。スマートフォンで使う現場の画面と、経営の数字が見える管理画面の両方を設計しています。</p>
+    <div class="btns">
+      <a class="btn primary" href="#works">作品を見る</a>
+      <a class="btn ghost" href="https://github.com/tono3679-creator" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <section id="works">
+    <div class="wrap">
+      <h2>作品</h2>
+      <p class="lead">どちらもデモ環境で実際に操作できます。</p>
+
+      <article class="work">
+        <div class="shot"><img src="images/delivery-dashboard.webp" alt="Delivery Manager のダッシュボード" loading="lazy"></div>
+        <div class="body">
+          <h3>Delivery Manager</h3>
+          <p class="tagline">配送業務のすべてを、ひとつの画面で。</p>
+          <ul>
+            <li>従業員5〜30名の配送会社向け。案件・配車・ドライバー・車両・荷主・売上を一元管理</li>
+            <li>配車ボードはドラッグで割り当て。ドライバーはスマートフォンから配送ステータスを更新</li>
+            <li>訪問者ごとに専用のデモ会社（案件 約6,000件）をその場で作成。権限は PostgreSQL の RLS で分離</li>
+          </ul>
+          <div class="gallery">
+            <img src="images/delivery-dispatch.webp" alt="配車ボード" loading="lazy">
+            <img src="images/delivery-driver.webp" alt="ドライバー画面（スマートフォン）" loading="lazy">
+          </div>
+          <ul class="tags"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>PostgreSQL / Neon</li><li>Tailwind CSS</li><li>Leaflet</li><li>Playwright</li></ul>
+          <div class="links">
+            <!-- TODO: 公開デモのURLに差し替え -->
+            <a href="https://github.com/tono3679-creator/delivery-manager" target="_blank" rel="noopener">ソースコード（GitHub）</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="shot"><img src="images/kensetsu-dashboard.webp" alt="建設DX Manager の経営ダッシュボード" loading="lazy"></div>
+        <div class="body">
+          <h3>建設DX Manager</h3>
+          <p class="tagline">案件から利益まで、工事ごとに見える化。</p>
+          <ul>
+            <li>中小規模の建設会社・設備工事会社向けの業務管理システム</li>
+            <li>「案件 → 現場作業 → 日報 → 勤怠 → 原価 → 売上・利益」を案件IDを中心に一元管理</li>
+            <li>管理者・現場責任者・一般スタッフの3つの役割。現場スタッフはスマートフォンで日報入力</li>
+          </ul>
+          <div class="gallery">
+            <img src="images/kensetsu-project.webp" alt="案件詳細（予算と実績）" loading="lazy">
+            <img src="images/kensetsu-mobile.webp" alt="スタッフのホーム（スマートフォン）" loading="lazy">
+          </div>
+          <ul class="tags"><li>Next.js 16</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li></ul>
+          <div class="links">
+            <a href="https://kensetsu-dx-manager.vercel.app" target="_blank" rel="noopener">デモを触る</a>
+            <a href="https://github.com/tono3679-creator/kensetsu-dx-manager" target="_blank" rel="noopener">ソースコード（GitHub）</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>自己紹介</h2>
+      <p class="lead"><!-- TODO: 自己紹介文 -->ここに経歴や得意なことを書きます。</p>
+      <div class="about">
+        <div class="card"><h3>大事にしていること</h3><p>画面・サーバー・データベースの3か所で業務ルールを守り、数字が画面ごとに食い違わない設計にすること。</p></div>
+        <div class="card"><h3>使っている技術</h3><p>Next.js / React / TypeScript / PostgreSQL / Supabase / Vercel / Vitest / Playwright</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>連絡先</h2>
+      <p class="lead">お仕事のご相談はこちらからどうぞ。</p>
+      <div class="btns">
+        <a class="btn ghost" href="https://github.com/tono3679-creator" target="_blank" rel="noopener">GitHub</a>
+        <!-- TODO: メールアドレスやSNSを追加 -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 YU</footer>
+</body>
+</html>
