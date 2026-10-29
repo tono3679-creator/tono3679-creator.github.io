@@ -48,12 +48,12 @@ section{padding:56px 0}
 h2{font-size:24px;margin:0 0 8px}
 .lead{color:var(--muted);margin:0 0 36px}
 .work{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:40px}
-.work .shot{background:var(--accent-soft);padding:24px 24px 0}
+.work .shot{background:var(--accent-soft);padding:20px 20px 0;border-radius:12px;margin:0 0 12px;overflow:hidden}
 .work .shot img{border-radius:10px 10px 0 0;box-shadow:var(--shadow)}
-.work .body{padding:28px}
+.work .body{padding:32px}
 .work h3{font-size:22px;margin:0 0 4px}
 .work .tagline{color:var(--accent);font-weight:500;margin:0 0 14px}
-.work ul{padding-left:1.2em;margin:0 0 18px;color:var(--muted)}
+.work ul{padding-left:1.2em;margin:0 0 24px;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
 .tags li{font-size:12px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-family:Inter,"Noto Sans JP",sans-serif}
 .gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:0 0 20px}
@@ -67,8 +67,9 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 @media (max-width:720px){
   nav a{margin-left:14px}
   .hero{padding:64px 0 48px}
-  .gallery,.about{grid-template-columns:1fr}
-  .work .shot{padding:16px 16px 0}
+  .about{grid-template-columns:1fr}
+  .gallery{gap:8px}
+  .work .shot{padding:12px 12px 0}
   .work .body{padding:20px}
 }
 </style>
@@ -98,7 +99,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
       <p class="lead">どちらもデモ環境で実際に操作できます。</p>
 
       <article class="work">
-        <div class="shot"><img src="images/delivery-dashboard.webp" alt="Delivery Manager のダッシュボード" loading="lazy"></div>
         <div class="body">
           <h3>Delivery Manager</h3>
           <p class="tagline">配送業務のすべてを、ひとつの画面で。</p>
@@ -107,6 +107,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
             <li>配車ボードはドラッグで割り当て。ドライバーはスマートフォンから配送ステータスを更新</li>
             <li>訪問者ごとに専用のデモ会社（案件 約6,000件）をその場で作成。権限は PostgreSQL の RLS で分離</li>
           </ul>
+          <div class="shot"><img src="images/delivery-dashboard.webp" alt="Delivery Manager のダッシュボード" loading="lazy"></div>
           <div class="gallery">
             <img src="images/delivery-dispatch.webp" alt="配車ボード" loading="lazy">
             <img src="images/delivery-driver.webp" alt="ドライバー画面（スマートフォン）" loading="lazy">
@@ -120,7 +121,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
       </article>
 
       <article class="work">
-        <div class="shot"><img src="images/kensetsu-dashboard.webp" alt="建設DX Manager の経営ダッシュボード" loading="lazy"></div>
         <div class="body">
           <h3>建設DX Manager</h3>
           <p class="tagline">案件から利益まで、工事ごとに見える化。</p>
@@ -129,6 +129,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
             <li>「案件 → 現場作業 → 日報 → 勤怠 → 原価 → 売上・利益」を案件IDを中心に一元管理</li>
             <li>管理者・現場責任者・一般スタッフの3つの役割。現場スタッフはスマートフォンで日報入力</li>
           </ul>
+          <div class="shot"><img src="images/kensetsu-dashboard.webp" alt="建設DX Manager の経営ダッシュボード" loading="lazy"></div>
           <div class="gallery">
             <img src="images/kensetsu-project.webp" alt="案件詳細（予算と実績）" loading="lazy">
             <img src="images/kensetsu-mobile.webp" alt="スタッフのホーム（スマートフォン）" loading="lazy">
