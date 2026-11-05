@@ -59,7 +59,11 @@ h2{font-size:24px;margin:0 0 8px}
 .gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:0 0 20px}
 .gallery img{border-radius:8px;border:1px solid var(--line);height:100%;object-fit:cover;object-position:left top}
 .links{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.intro{max-width:720px;margin:16px 0 32px}
+.intro p{margin:0 0 16px}
+.questions{list-style:none;margin:0 0 16px;padding:16px 20px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
+.questions li{font-weight:500;color:var(--text)}
+#about .card{max-width:720px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
 .card h3{margin:0 0 8px;font-size:16px}
 .card p{margin:0;color:var(--muted);font-size:15px}
@@ -67,7 +71,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 @media (max-width:720px){
   nav a{margin-left:14px}
   .hero{padding:64px 0 48px}
-  .about{grid-template-columns:1fr}
   .gallery{gap:8px}
   .work .shot{padding:12px 12px 0}
   .work .body{padding:20px}
@@ -147,11 +150,21 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
   <section id="about">
     <div class="wrap">
       <h2>自己紹介</h2>
-      <p class="lead"><!-- TODO: 自己紹介文 -->ここに経歴や得意なことを書きます。</p>
-      <div class="about">
-        <div class="card"><h3>大事にしていること</h3><p>画面・サーバー・データベースの3か所で業務ルールを守り、数字が画面ごとに食い違わない設計にすること。</p></div>
-        <div class="card"><h3>使っている技術</h3><p>Next.js / React / TypeScript / PostgreSQL / Supabase / Vercel / Vitest / Playwright</p></div>
+      <div class="intro">
+        <p>Web開発を中心に、業務効率化・DX支援につながるシステム開発に取り組んでいます。</p>
+        <p>これまでのWeb開発経験を活かしながら、現在はAIツールも積極的に取り入れ、業務管理システムやダッシュボード、予約管理システムなどの開発を行っています。</p>
+        <p>特に、紙・Excel・手作業で管理されている業務を整理し、Webシステムとして一元化することで、作業時間の削減や情報の見える化につなげることを意識しています。</p>
+        <p>ポートフォリオでは、建設・設備会社向けの業務管理システム、配達員向けの収益分析ダッシュボード、汎用予約管理システムなど、実際の業務課題を想定したシステムを制作しています。</p>
+        <p>単にシステムを作るだけではなく、</p>
+        <ul class="questions">
+          <li>「どの業務に時間がかかっているのか」</li>
+          <li>「どこを自動化すれば効果が大きいのか」</li>
+          <li>「現場の方が使いやすい形は何か」</li>
+        </ul>
+        <p>を考えながら、業務改善につながる開発を行うことを大切にしています。</p>
+        <p>今後は、Web開発とAIを活用しながら、中小企業のDX推進や業務効率化を支援できるエンジニアを目指しています。</p>
       </div>
+      <div class="card"><h3>使っている技術</h3><p>Next.js / React / TypeScript / PostgreSQL / Supabase / Vercel / Vitest / Playwright</p></div>
     </div>
   </section>
 
