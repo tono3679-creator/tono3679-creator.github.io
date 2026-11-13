@@ -194,13 +194,29 @@ p { text-wrap: pretty; }
 }
 
 .logo {
-  font-family: var(--serif);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: .06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
   line-height: 1;
   text-decoration: none;
-  padding: 12px 0;
+}
+.logo-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: .14em;
+}
+.logo-role {
+  padding-left: 16px;
+  border-left: 1px solid var(--rule);
+  font-family: var(--latin);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  line-height: 18px;
 }
 
 .nav ul {
@@ -758,7 +774,8 @@ a.frame:hover img { transform: scale(1.012); }
   body { font-size: 15px; line-height: 1.9; }
 
   .site-header .container { min-height: 72px; }
-  .logo { font-size: 22px; }
+  .logo-name { font-size: 20px; }
+  .logo-role { display: none; }
   .nav ul { gap: 18px; }
   .nav a { font-size: 13px; }
 
