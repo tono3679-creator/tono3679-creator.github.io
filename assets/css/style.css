@@ -1,5 +1,5 @@
 /* ==========================================================
-   YU. Portfolio
+   YU Portfolio
    Warm white / charcoal / one accent. No framework.
    ========================================================== */
 
@@ -52,8 +52,8 @@ ul, ol { padding: 0; list-style: none; }
 
 /* Japanese line breaking: break at phrase boundaries where supported */
 h1, h2, h3, .phrase,
-.work-desc, .hero-lead, .about-lead, .contact-lead, .project-lead,
-.facts dd, .features dt, .principles li, .shot figcaption {
+.work-desc, .hero-lead, .contact-lead, .project-lead,
+.facts dd, .features dt, .shot figcaption {
   word-break: auto-phrase;
   text-wrap: balance;
 }
@@ -338,44 +338,35 @@ a.frame:hover img { transform: scale(1.012); }
 /* ---------- About ---------- */
 
 .about-body { grid-column: 4 / 12; }
-.about-lead {
+.about-part + .about-part { margin-top: clamp(64px, 8vw, 112px); }
+.about-heading {
   font-family: var(--serif);
-  font-size: clamp(19px, 1.9vw, 24px);
-  line-height: 2.1;
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.6;
   letter-spacing: .06em;
+  margin-bottom: clamp(20px, 2.6vw, 32px);
 }
-.about-lead + .about-lead { margin-top: 1.1em; }
-
-.principles {
-  margin-top: clamp(56px, 7vw, 88px);
+.about-text { max-width: 36em; }
+.about-text p {
+  color: var(--ink-2);
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 2.1;
 }
-.principles h3 {
-  font-size: 14px;
+.about-text p + p { margin-top: .9em; }
+.about-text strong {
   font-weight: 500;
-  letter-spacing: .1em;
-  color: var(--ink-3);
-  margin-bottom: 16px;
-}
-.principles ol { border-top: 1px solid var(--rule); counter-reset: p; }
-.principles li {
-  counter-increment: p;
-  display: grid;
-  grid-template-columns: 3.2em 1fr;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--rule);
-  font-size: clamp(15px, 1.3vw, 17px);
-}
-.principles li::before {
-  content: counter(p, decimal-leading-zero);
-  font-family: var(--latin);
-  font-size: 12px;
-  letter-spacing: .12em;
-  color: var(--accent);
-  padding-top: .35em;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .4em;
 }
 
 .tools {
-  margin-top: 48px;
+  margin-top: clamp(64px, 8vw, 112px);
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 24px;
