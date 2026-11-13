@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReserveFlow | YU.</title>
+<meta name="description" content="美容室・整体院・パーソナルジム・レンタルスペースなど、複数の業種で使える予約・顧客管理システム。">
+<link rel="canonical" href="https://tono3679-creator.github.io/works/reserveflow/">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YU. Portfolio">
+<meta property="og:title" content="ReserveFlow | YU.">
+<meta property="og:description" content="美容室・整体院・パーソナルジム・レンタルスペースなど、複数の業種で使える予約・顧客管理システム。">
+<meta property="og:url" content="https://tono3679-creator.github.io/works/reserveflow/">
+<meta property="og:image" content="https://tono3679-creator.github.io/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../../" aria-label="YU. トップページ">YU.</a>
+    <nav class="nav" aria-label="メイン">
+      <ul>
+        <li><a class="u" href="../../#work" aria-current="page">Work</a></li>
+        <li><a class="u" href="../../#about">About</a></li>
+        <li><a class="u" href="../../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article aria-labelledby="project-title">
+    <div class="container">
+      <p class="back"><a class="u" href="../../#work">← 制作実績一覧へ</a></p>
+      <header class="project-head grid">
+        <span class="no">No. 02</span>
+        <h1 class="project-title" id="project-title">ReserveFlow</h1>
+        <p class="project-lead">美容室や整体院など、<span class="nb">複数の業種で使える</span>予約・顧客管理システムです。</p>
+        <dl class="facts">
+          <div><dt class="label">Client</dt><dd>美容室・ネイルサロン・整体院・パーソナルジム・個人スクール・レンタルスペース</dd></div>
+          <div><dt class="label">Users</dt><dd>オーナー・マネージャー・スタッフ（管理画面）<br>お客様（公開予約ページ）</dd></div>
+          <div><dt class="label">Demo</dt><dd>登録不要。4業種の店舗を<br>訪問者ごとに作成</dd></div>
+        </dl>
+        <p class="project-actions">
+          <a class="button" href="https://reserveflow-umber.vercel.app" target="_blank" rel="noopener">デモを触る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+          <a class="text-link" href="https://github.com/tono3679-creator/reserveflow" target="_blank" rel="noopener">GitHub でソースコードを見る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+        </p>
+      </header>
+      <figure class="project-hero">
+        <div class="frame"><img src="../../images/reserveflow-dashboard.webp" width="1200" height="750" alt="ReserveFlow のダッシュボード。予約件数・売上・リピート率などの指標とインサイト" decoding="async" fetchpriority="high"></div>
+      </figure>
+
+      <section class="block grid" aria-labelledby="s-overview">
+        <div class="block-title"><span class="label">Overview</span><h2 id="s-overview">プロジェクト概要</h2></div>
+        <div class="block-body">
+          <p class="large">予約・顧客・スタッフ・売上をまとめて管理する、クラウド型の予約システムです。業種の違いは設定とデータで表しているため、同じ仕組みのまま、さまざまなお店で使えるように設計しています。</p>
+          <p class="large">画面に出る数値やインサイト、おすすめの理由は、すべて実際の予約データから計算しています。AI の API は使っていません。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-problem">
+        <div class="block-title"><span class="label">Problem</span><h2 id="s-problem">想定した業務課題</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>予約を電話や紙の台帳で受けていて、同じ時間に予約が重なることがある</li>
+            <li>スタッフの勤務や休憩、部屋・機材の空きまで考えて予約を調整するのに手間がかかる</li>
+            <li>無断キャンセルやリピートの状況を、数字として把握できていない</li>
+            <li>空いている時間をどう埋めればよいか、判断の材料がない</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-solution">
+        <div class="block-title"><span class="label">Solution</span><h2 id="s-solution">解決方法</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>同じスタッフ・設備の時間の重なり（前後の準備時間を含む）は、データベースの排他制約で拒否します。同時に予約が入っても、成功するのは1件だけです。</li>
+            <li>営業時間・勤務・休憩・休暇・設備をもとに空き枠を計算し、管理画面と公開予約ページで同じ判定を使っています。</li>
+            <li>売上・無断キャンセル率・リピート率を、期間と母数を明記したうえで表示します。</li>
+            <li>条件を満たす空き枠を探して重み付きのスコアで順位をつけ、計算した理由とともに管理画面で提案します。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-features">
+        <div class="block-title"><span class="label">Features</span><h2 id="s-features">主要機能</h2></div>
+        <div class="block-body">
+          <dl class="features">
+            <div><dt>予約カレンダー</dt><dd>月・週・日・スタッフ別の表示。カレンダーから登録し、ドラッグで日時や担当を変更。</dd></div>
+            <div><dt>顧客管理</dt><dd>来店回数・利用額・無断キャンセル率。新規・リピーター・VIP・休眠の区分（基準は設定で変更可能）。</dd></div>
+            <div><dt>スタッフ・サービス</dt><dd>勤務スケジュール・休憩・休暇、担当サービス、必要な設備、前後の準備時間。</dd></div>
+            <div><dt>公開予約ページ</dt><dd>スマートフォン向けの8ステップ。予約の確認・変更・キャンセルにも対応。</dd></div>
+            <div><dt>ダッシュボード・分析</dt><dd>KPI 8種とグラフ。売上、無断キャンセル、リピート率（30・60・90日）の分析。</dd></div>
+            <div><dt>スマート空き枠提案</dt><dd>10の条件を満たす枠を探し、4項目のスコアで順位づけ。おすすめの理由を表示。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="s-shots">
+        <div class="grid"><div class="block-title"><span class="label">Screens</span><h2 id="s-shots">スクリーンショット</h2></div></div>
+        <div class="shots">
+        <figure class="shot">
+          <div class="frame"><img src="../../images/reserveflow-calendar.webp" width="1200" height="750" alt="予約カレンダー（週表示）。空き時間をドラッグして新規予約、予約をドラッグして日時を変更" decoding="async" loading="lazy"></div>
+          <figcaption>予約カレンダー（週表示）。空き時間をドラッグして新規予約、予約をドラッグして日時を変更</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame phones">
+            <div><img src="../../images/reserveflow-booking.webp" width="780" height="1688" alt="公開予約ページ" decoding="async" loading="lazy"></div>
+          </div>
+          <figcaption>お客様向けの公開予約ページ（スマートフォン）</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-stack">
+        <div class="block-title"><span class="label">Tech</span><h2 id="s-stack">使用技術</h2></div>
+        <div class="block-body">
+          <ul class="stack" aria-label="使用技術">
+            <li>Next.js 16（App Router）</li>
+            <li>TypeScript</li>
+            <li>PostgreSQL（Supabase）</li>
+            <li>Tailwind CSS 4</li>
+            <li>shadcn/ui</li>
+            <li>FullCalendar</li>
+            <li>Recharts</li>
+            <li>React Hook Form・Zod</li>
+            <li>date-fns</li>
+            <li>Vitest</li>
+            <li>Playwright</li>
+            <li>Vercel</li>
+          </ul>
+          <ul class="points" aria-label="設計のポイント">
+            <li>企業と店舗を分け、データは RLS で企業ごとに分離しています。</li>
+            <li>オーナー・マネージャー・スタッフの権限は、画面・サーバー・データベースの3段で判定しています。</li>
+            <li>通知（確定・変更・キャンセル・リマインド）は記録と送信状態を管理し、二重送信を防いでいます。メールの送信はAPIキーを設定した場合のみで、デモでは内容を画面に表示します。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-links">
+        <div class="block-title"><span class="label">Links</span><h2 id="s-links">デモ・ソースコード</h2></div>
+        <div class="block-body">
+          <ul class="links-list">
+            <li><a href="https://reserveflow-umber.vercel.app" target="_blank" rel="noopener"><span>デモ</span><span class="url">reserveflow-umber.vercel.app</span><span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+            <li><a href="https://github.com/tono3679-creator/reserveflow" target="_blank" rel="noopener"><span>GitHub</span><span class="url">github.com/tono3679-creator/reserveflow</span><span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+          </ul>
+          <p class="demo-note">登録は不要です。トップページで業種を選んで「〜で試す」を押すと、訪問者専用の4業種の店舗が作られます。右上のメニューから、オーナー・マネージャー・スタッフの立場を切り替えられます。</p>
+        </div>
+      </section>
+
+      <nav class="next-project" aria-label="次の制作実績">
+        <a href="../../works/kensetsu-dx-manager/">
+          <span class="label">Next — No. 03</span>
+          <span class="next-title">建設DX Manager <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><small>&copy; 2026 YU.</small></p>
+      <a class="u" href="#top">ページの先頭へ</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

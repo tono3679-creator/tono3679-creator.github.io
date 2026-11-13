@@ -3,206 +3,154 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ゆー Portfolio</title>
-<meta name="description" content="中小企業の現場の仕事を、ひとつの画面にまとめる業務システムを作っています。">
+<title>YU. | 業務効率化・DXを支援するWebアプリケーション開発</title>
+<meta name="description" content="業務の課題を整理し、使いやすいWebシステムへ。配送・予約・建設業向けの業務管理システムなど、業務効率化・DXを支援するアプリケーションを開発しています。">
+<link rel="canonical" href="https://tono3679-creator.github.io/">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YU. Portfolio">
+<meta property="og:title" content="YU. | 業務効率化・DXを支援するWebアプリケーション開発">
+<meta property="og:description" content="業務の課題を整理し、使いやすいWebシステムへ。配送・予約・建設業向けの業務管理システムなど、業務効率化・DXを支援するアプリケーションを開発しています。">
+<meta property="og:url" content="https://tono3679-creator.github.io/">
+<meta property="og:image" content="https://tono3679-creator.github.io/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f7f6f3; --surface:#ffffff; --text:#1d1d1f; --muted:#5f5f66; --line:#e3e1dc;
-  --accent:#1f6f5c; --accent-soft:#e3f0ec; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#141516; --surface:#1d1f21; --text:#ececec; --muted:#a2a4a8; --line:#2e3134;
-    --accent:#5cc3a6; --accent-soft:#1d3530; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#141516; --surface:#1d1f21; --text:#ececec; --muted:#a2a4a8; --line:#2e3134;
-  --accent:#5cc3a6; --accent-soft:#1d3530; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
-a{color:var(--accent)}
-img{max-width:100%;display:block}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font-family:Inter,sans-serif;font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--text)}
-nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-size:14px}
-nav a:hover{color:var(--text)}
-.hero{padding:96px 0 72px}
-.eyebrow{font-family:Inter,sans-serif;color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px}
-.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.4;margin:0 0 20px;font-weight:700}
-.hero p{color:var(--muted);max-width:620px;margin:0 0 28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
-.btn.primary{background:var(--accent);color:#fff}
-:root[data-theme="dark"] .btn.primary{color:#0d1f1a}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0d1f1a}}
-.btn.ghost{border:1px solid var(--line);color:var(--text)}
-section{padding:56px 0}
-h2{font-size:24px;margin:0 0 8px}
-.lead{color:var(--muted);margin:0 0 36px}
-.work{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:40px}
-.work .shot{background:var(--accent-soft);padding:20px 20px 0;border-radius:12px;margin:0 0 12px;overflow:hidden}
-.work .shot img{border-radius:10px 10px 0 0;box-shadow:var(--shadow)}
-.work .body{padding:32px}
-.work h3{font-size:22px;margin:0 0 4px}
-.work .tagline{color:var(--accent);font-weight:500;margin:0 0 14px}
-.work ul{padding-left:1.2em;margin:0 0 24px;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
-.tags li{font-size:12px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-family:Inter,"Noto Sans JP",sans-serif}
-.gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:0 0 20px}
-.gallery img{border-radius:8px;border:1px solid var(--line);height:100%;object-fit:cover;object-position:left top}
-.links{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
-.intro{max-width:720px;margin:16px 0 32px}
-.intro p{margin:0 0 16px}
-.questions{list-style:none;margin:0 0 16px;padding:16px 20px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
-.questions li{font-weight:500;color:var(--text)}
-#about .card{max-width:720px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
-.card h3{margin:0 0 8px;font-size:16px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
-@media (max-width:720px){
-  nav a{margin-left:14px}
-  .hero{padding:64px 0 48px}
-  .gallery{gap:8px}
-  .work .shot{padding:12px 12px 0}
-  .work .body{padding:20px}
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#">YU / Portfolio</a>
-    <nav><a href="#works">作品</a><a href="#about">自己紹介</a><a href="#contact">連絡先</a></nav>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="./" aria-label="YU. トップページ">YU.</a>
+    <nav class="nav" aria-label="メイン">
+      <ul>
+        <li><a class="u" href="#work">Work</a></li>
+        <li><a class="u" href="#about">About</a></li>
+        <li><a class="u" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<main>
-  <div class="wrap hero">
-    <p class="eyebrow">Web Application Developer</p>
-    <h1>現場の仕事を、<br>ひとつの画面にまとめる。</h1>
-    <p>Excel・紙・ホワイトボードで回っている中小企業の業務を、だれでも使える Web アプリに置き換える仕組みを作っています。スマートフォンで使う現場の画面と、経営の数字が見える管理画面の両方を設計しています。</p>
-    <div class="btns">
-      <a class="btn primary" href="#works">作品を見る</a>
-      <a class="btn ghost" href="https://github.com/tono3679-creator" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-
-  <section id="works">
-    <div class="wrap">
-      <h2>作品</h2>
-      <p class="lead">どれもデモ環境で実際に操作できます。</p>
-
-      <article class="work">
-        <div class="body">
-          <h3>Delivery Manager</h3>
-          <p class="tagline">配送業務のすべてを、ひとつの画面で。</p>
-          <ul>
-            <li>従業員5〜30名の配送会社向け。案件・配車・ドライバー・車両・荷主・売上を一元管理</li>
-            <li>配車ボードはドラッグで割り当て。ドライバーはスマートフォンから配送ステータスを更新</li>
-            <li>訪問者ごとに専用のデモ会社（案件 約6,000件）をその場で作成。権限は PostgreSQL の RLS で分離</li>
-          </ul>
-          <div class="shot"><img src="images/delivery-dashboard-2026-11.webp" alt="Delivery Manager のダッシュボード" loading="lazy"></div>
-          <div class="gallery">
-            <img src="images/delivery-dispatch.webp" alt="配車ボード" loading="lazy">
-            <img src="images/delivery-driver.webp" alt="ドライバー画面（スマートフォン）" loading="lazy">
-          </div>
-          <ul class="tags"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>PostgreSQL / Neon</li><li>Tailwind CSS</li><li>Leaflet</li><li>Playwright</li></ul>
-          <div class="links">
-            <a href="https://delivery-manager-azure.vercel.app" target="_blank" rel="noopener">デモを触る</a>
-            <a href="https://github.com/tono3679-creator/delivery-manager" target="_blank" rel="noopener">ソースコード（GitHub）</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="body">
-          <h3>ReserveFlow</h3>
-          <p class="tagline">予約管理をシンプルに。店舗経営をスマートに。</p>
-          <ul>
-            <li>美容室・整体院・パーソナルジム・レンタルスペースなど、複数の業種で使える予約・顧客管理システム</li>
-            <li>予約カレンダーはドラッグで日時・担当を変更。スタッフや設備の時間の重なりはデータベースで拒否</li>
-            <li>お客様はスマートフォンの公開予約ページから予約。空き枠をおすすめ順に提案し、理由も表示</li>
-            <li>売上・無断キャンセル率・リピート率などの数値は、すべて実際の予約データから計算</li>
-          </ul>
-          <div class="shot"><img src="images/reserveflow-dashboard.webp" alt="ReserveFlow のダッシュボード" loading="lazy"></div>
-          <div class="gallery">
-            <img src="images/reserveflow-calendar.webp" alt="予約カレンダー（週表示）" loading="lazy">
-            <img src="images/reserveflow-booking.webp" alt="公開予約ページ（スマートフォン）" loading="lazy">
-          </div>
-          <ul class="tags"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>PostgreSQL / Supabase</li><li>Tailwind CSS</li><li>FullCalendar</li><li>Recharts</li><li>Playwright</li></ul>
-          <div class="links">
-            <a href="https://reserveflow-umber.vercel.app" target="_blank" rel="noopener">デモを触る</a>
-            <a href="https://github.com/tono3679-creator/reserveflow" target="_blank" rel="noopener">ソースコード（GitHub）</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="work">
-        <div class="body">
-          <h3>建設DX Manager</h3>
-          <p class="tagline">案件から利益まで、工事ごとに見える化。</p>
-          <ul>
-            <li>中小規模の建設会社・設備工事会社向けの業務管理システム</li>
-            <li>「案件 → 現場作業 → 日報 → 勤怠 → 原価 → 売上・利益」を案件IDを中心に一元管理</li>
-            <li>管理者・現場責任者・一般スタッフの3つの役割。現場スタッフはスマートフォンで日報入力</li>
-          </ul>
-          <div class="shot"><img src="images/kensetsu-dashboard.webp" alt="建設DX Manager の経営ダッシュボード" loading="lazy"></div>
-          <div class="gallery">
-            <img src="images/kensetsu-project.webp" alt="案件詳細（予算と実績）" loading="lazy">
-            <img src="images/kensetsu-mobile.webp" alt="スタッフのホーム（スマートフォン）" loading="lazy">
-          </div>
-          <ul class="tags"><li>Next.js 16</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li></ul>
-          <div class="links">
-            <a href="https://kensetsu-dx-manager.vercel.app" target="_blank" rel="noopener">デモを触る</a>
-            <a href="https://github.com/tono3679-creator/kensetsu-dx-manager" target="_blank" rel="noopener">ソースコード（GitHub）</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap">
-      <h2>自己紹介</h2>
-      <div class="intro">
-        <p>Web開発を中心に、業務効率化・DX支援につながるシステム開発に取り組んでいます。</p>
-        <p>これまでのWeb開発経験を活かしながら、現在はAIツールも積極的に取り入れ、業務管理システムやダッシュボード、予約管理システムなどの開発を行っています。</p>
-        <p>特に、紙・Excel・手作業で管理されている業務を整理し、Webシステムとして一元化することで、作業時間の削減や情報の見える化につなげることを意識しています。</p>
-        <p>ポートフォリオでは、建設・設備会社向けの業務管理システム、配達員向けの収益分析ダッシュボード、汎用予約管理システムなど、実際の業務課題を想定したシステムを制作しています。</p>
-        <p>単にシステムを作るだけではなく、</p>
-        <ul class="questions">
-          <li>「どの業務に時間がかかっているのか」</li>
-          <li>「どこを自動化すれば効果が大きいのか」</li>
-          <li>「現場の方が使いやすい形は何か」</li>
-        </ul>
-        <p>を考えながら、業務改善につながる開発を行うことを大切にしています。</p>
-        <p>今後は、Web開発とAIを活用しながら、中小企業のDX推進や業務効率化を支援できるエンジニアを目指しています。</p>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="label">Web Application Developer</p>
+      <h1 class="hero-title" id="hero-title"><span>現場の仕事を、</span><span>もっとシンプルに。</span></h1>
+      <div class="hero-body grid">
+        <p class="hero-lead"><span>業務の課題を整理し、使いやすいWebシステムへ。</span><br><span>業務効率化・DXを支援する</span><span>アプリケーションを開発しています。</span></p>
+        <p class="hero-actions"><a class="button" href="#work">制作実績を見る <span class="arrow arrow--down" aria-hidden="true">↓</span></a></p>
       </div>
-      <div class="card"><h3>使っている技術</h3><p>Next.js / React / TypeScript / PostgreSQL / Supabase / Vercel / Vitest / Playwright</p></div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="wrap">
-      <h2>連絡先</h2>
-      <p class="lead">お仕事のご相談はこちらからどうぞ。</p>
-      <div class="btns">
-        <a class="btn ghost" href="https://github.com/tono3679-creator" target="_blank" rel="noopener">GitHub</a>
-        <!-- TODO: メールアドレスやSNSを追加 -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head grid">
+        <p class="label">Work</p>
+        <h2 id="work-title">制作実績</h2>
+      </div>
+      <div class="works">
+        <article class="work grid work--wide" aria-labelledby="w-delivery-manager">
+          <header class="work-head">
+            <span class="no">No. 01</span>
+            <h3 class="work-title" id="w-delivery-manager"><a href="works/delivery-manager/">Delivery Manager</a></h3>
+          </header>
+          <figure class="work-figure">
+            <a class="frame" href="works/delivery-manager/" tabindex="-1" aria-hidden="true"><img src="images/delivery-dashboard-2026-11.webp" width="1200" height="704" alt="" decoding="async" loading="lazy"></a>
+          </figure>
+          <div class="work-body">
+            <p class="work-desc">配送会社の案件・配車・ドライバー・売上を、ひとつの画面で管理する業務システム。</p>
+            <p class="work-more"><a class="text-link" href="works/delivery-manager/">詳細を見る<span class="visually-hidden">（Delivery Manager）</span> <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+        </article>
+        <article class="work grid work--right" aria-labelledby="w-reserveflow">
+          <header class="work-head">
+            <span class="no">No. 02</span>
+            <h3 class="work-title" id="w-reserveflow"><a href="works/reserveflow/">ReserveFlow</a></h3>
+          </header>
+          <figure class="work-figure">
+            <a class="frame" href="works/reserveflow/" tabindex="-1" aria-hidden="true"><img src="images/reserveflow-dashboard.webp" width="1200" height="750" alt="" decoding="async" loading="lazy"></a>
+          </figure>
+          <div class="work-body">
+            <p class="work-desc">美容室や整体院など、複数の業種で使える予約・顧客管理システム。</p>
+            <p class="work-more"><a class="text-link" href="works/reserveflow/">詳細を見る<span class="visually-hidden">（ReserveFlow）</span> <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+        </article>
+        <article class="work grid work--left" aria-labelledby="w-kensetsu-dx-manager">
+          <header class="work-head">
+            <span class="no">No. 03</span>
+            <h3 class="work-title" id="w-kensetsu-dx-manager"><a href="works/kensetsu-dx-manager/">建設DX Manager</a></h3>
+          </header>
+          <figure class="work-figure">
+            <a class="frame" href="works/kensetsu-dx-manager/" tabindex="-1" aria-hidden="true"><img src="images/kensetsu-dashboard.webp" width="1200" height="750" alt="" decoding="async" loading="lazy"></a>
+          </figure>
+          <div class="work-body">
+            <p class="work-desc">建設・設備工事会社の日報・勤怠・原価を案件ごとにつなぎ、工事ごとの利益を見える化するシステム。</p>
+            <p class="work-more"><a class="text-link" href="works/kensetsu-dx-manager/">詳細を見る<span class="visually-hidden">（建設DX Manager）</span> <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-head grid">
+        <p class="label">About</p>
+        <h2 id="about-title">自己紹介</h2>
+      </div>
+      <div class="grid">
+        <div class="about-body">
+          <p class="about-lead">Web開発の経験を活かし、<span class="nb">業務効率化・DX支援に</span>つながるシステムを開発しています。</p>
+          <p class="about-lead">複雑な業務を整理し、<span class="nb">現場の方が迷わず使える</span><span class="nb">シンプルな仕組み</span>をつくることを大切にしています。</p>
+          <div class="principles">
+            <h3>開発のときに考えていること</h3>
+            <ol>
+              <li>どの業務に時間がかかっているのか</li>
+              <li>どこを自動化すれば効果が大きいのか</li>
+              <li>現場の方が使いやすい形は何か</li>
+            </ol>
+          </div>
+          <dl class="tools">
+            <dt class="label">Tools</dt>
+            <dd>Next.js / React / TypeScript / PostgreSQL / Supabase / Tailwind CSS / Vercel / Vitest / Playwright</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head grid">
+        <p class="label">Contact</p>
+        <h2 id="contact-title">お問い合わせ</h2>
+      </div>
+      <div class="grid">
+        <div class="contact-body">
+          <p class="contact-lead">業務の整理から、<wbr>Webシステムの開発まで。<br>ご相談をお待ちしています。</p>
+          <p class="contact-actions">
+            <a class="button" href="https://github.com/tono3679-creator" target="_blank" rel="noopener">GitHub プロフィール <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+            <span class="sub">github.com/tono3679-creator</span>
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer>© 2026 YU</footer>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><small>&copy; 2026 YU.</small></p>
+      <a class="u" href="#top">ページの先頭へ</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

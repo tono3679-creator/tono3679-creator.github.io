@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tono3679-creator.github.io/sitemap.xml

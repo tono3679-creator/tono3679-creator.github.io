@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建設DX Manager | YU.</title>
+<meta name="description" content="建設・設備工事会社向けの業務管理システム。日報・勤怠・原価を案件ごとにつなぎ、工事ごとの利益を見える化します。">
+<link rel="canonical" href="https://tono3679-creator.github.io/works/kensetsu-dx-manager/">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YU. Portfolio">
+<meta property="og:title" content="建設DX Manager | YU.">
+<meta property="og:description" content="建設・設備工事会社向けの業務管理システム。日報・勤怠・原価を案件ごとにつなぎ、工事ごとの利益を見える化します。">
+<meta property="og:url" content="https://tono3679-creator.github.io/works/kensetsu-dx-manager/">
+<meta property="og:image" content="https://tono3679-creator.github.io/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../../" aria-label="YU. トップページ">YU.</a>
+    <nav class="nav" aria-label="メイン">
+      <ul>
+        <li><a class="u" href="../../#work" aria-current="page">Work</a></li>
+        <li><a class="u" href="../../#about">About</a></li>
+        <li><a class="u" href="../../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article aria-labelledby="project-title">
+    <div class="container">
+      <p class="back"><a class="u" href="../../#work">← 制作実績一覧へ</a></p>
+      <header class="project-head grid">
+        <span class="no">No. 03</span>
+        <h1 class="project-title" id="project-title">建設DX Manager</h1>
+        <p class="project-lead">建設・設備工事会社の日報・勤怠・原価を<span class="nb">案件ごとにつなぎ、</span>工事ごとの利益を見える化する業務システムです。</p>
+        <dl class="facts">
+          <div><dt class="label">Client</dt><dd>10〜50名規模の建設会社・設備工事会社</dd></div>
+          <div><dt class="label">Users</dt><dd>経営者・事務（管理者）<br>現場責任者・現場スタッフ</dd></div>
+          <div><dt class="label">Demo</dt><dd>3つの役割でログイン可能。<br>毎日4:00に初期状態へ</dd></div>
+        </dl>
+        <p class="project-actions">
+          <a class="button" href="https://kensetsu-dx-manager.vercel.app" target="_blank" rel="noopener">デモを触る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+          <a class="text-link" href="https://github.com/tono3679-creator/kensetsu-dx-manager" target="_blank" rel="noopener">GitHub でソースコードを見る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+        </p>
+      </header>
+      <figure class="project-hero">
+        <div class="frame"><img src="../../images/kensetsu-dashboard.webp" width="1200" height="750" alt="建設DX Manager の経営ダッシュボード。今月の売上・粗利益・要確認の一覧" decoding="async" fetchpriority="high"></div>
+      </figure>
+
+      <section class="block grid" aria-labelledby="s-overview">
+        <div class="block-title"><span class="label">Overview</span><h2 id="s-overview">プロジェクト概要</h2></div>
+        <div class="block-body">
+          <p class="large">「案件登録 → 現場作業 → 日報 → 勤怠 → 原価 → 売上・利益」を、案件IDを中心に一元管理するシステムです。</p>
+          <p class="large">現場スタッフはスマートフォンで打刻と日報を入力し、管理者は工事ごとの利益と会社全体の状況をダッシュボードで確認します。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-problem">
+        <div class="block-title"><span class="label">Problem</span><h2 id="s-problem">想定した業務課題</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>現場日報が紙で、事務所で回収して転記している</li>
+            <li>勤怠をタイムカードや Excel で管理し、月末に手で集計している</li>
+            <li>案件台帳と原価を、Excel に二重に入力している</li>
+            <li>工事ごとの原価と利益が、終わってみるまで分からない</li>
+            <li>工期や原価の超過、請求漏れに気づくのが遅れる</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-solution">
+        <div class="block-title"><span class="label">Solution</span><h2 id="s-solution">解決方法</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>日報はスマートフォンから写真付きで提出し、案件ごとに時系列でまとまります。</li>
+            <li>出勤・退勤ボタンで打刻し、実働時間と残業時間を自動で計算します。</li>
+            <li>勤怠から労務費を自動で計上し、材料費・外注費・経費も案件に紐付けます。</li>
+            <li>予算原価と実績原価、粗利益・利益率を、案件ごとにその場で表示します。</li>
+            <li>工期超過・原価超過・未請求・日報未提出・打刻漏れを「要確認」に自動で表示します。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-features">
+        <div class="block-title"><span class="label">Features</span><h2 id="s-features">主要機能</h2></div>
+        <div class="block-body">
+          <dl class="features">
+            <div><dt>案件管理</dt><dd>売上・原価・粗利益・利益率の一覧。予算と実績のメーター（90%で警告、超過で赤表示）。</dd></div>
+            <div><dt>現場日報</dt><dd>スマートフォン向けの入力。施工前・施工中・施工後の写真を添付。</dd></div>
+            <div><dt>勤怠管理</dt><dd>出勤・退勤の打刻、月次勤怠、案件別の作業時間と労務費。</dd></div>
+            <div><dt>原価管理</dt><dd>労務費・材料費・外注費・経費を集計し、総原価・粗利益・予算消化率を自動計算。</dd></div>
+            <div><dt>経営ダッシュボード</dt><dd>月別の売上推移、工事種別・担当者別の集計、要確認の一覧。</dd></div>
+            <div><dt>権限</dt><dd>管理者・現場責任者・一般スタッフで見られる範囲を分け、データベースでも同じ範囲に制限。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="s-shots">
+        <div class="grid"><div class="block-title"><span class="label">Screens</span><h2 id="s-shots">スクリーンショット</h2></div></div>
+        <div class="shots">
+        <figure class="shot">
+          <div class="frame"><img src="../../images/kensetsu-project.webp" width="1200" height="1041" alt="案件詳細。予算原価と実績原価、原価の内訳" decoding="async" loading="lazy"></div>
+          <figcaption>案件詳細。予算原価と実績原価、原価の内訳</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame phones">
+            <div><img src="../../images/kensetsu-mobile.webp" width="780" height="1688" alt="現場スタッフのホーム" decoding="async" loading="lazy"></div>
+            <div><img src="../../images/kensetsu-daily-report.webp" width="780" height="1688" alt="日報入力" decoding="async" loading="lazy"></div>
+          </div>
+          <figcaption>現場スタッフの画面（スマートフォン）</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-stack">
+        <div class="block-title"><span class="label">Tech</span><h2 id="s-stack">使用技術</h2></div>
+        <div class="block-body">
+          <ul class="stack" aria-label="使用技術">
+            <li>Next.js 16（App Router・Server Actions）</li>
+            <li>TypeScript</li>
+            <li>Supabase（PostgreSQL・Auth・Storage）</li>
+            <li>PGlite（デモモード）</li>
+            <li>Tailwind CSS 4</li>
+            <li>shadcn/ui</li>
+            <li>Recharts</li>
+            <li>Zod</li>
+            <li>Vitest</li>
+            <li>Vercel</li>
+          </ul>
+          <ul class="points" aria-label="設計のポイント">
+            <li>すべてのクエリを RLS 付きで実行し、権限外のデータはデータベースが返さないようにしています。</li>
+            <li>原価計算はデータベースのビューにまとめ、テストで独立した再計算と照合しています。</li>
+            <li>金額は円単位の整数で厳密に保持し、端数の誤差が出ないようにしています。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-links">
+        <div class="block-title"><span class="label">Links</span><h2 id="s-links">デモ・ソースコード</h2></div>
+        <div class="block-body">
+          <ul class="links-list">
+            <li><a href="https://kensetsu-dx-manager.vercel.app" target="_blank" rel="noopener"><span>デモ</span><span class="url">kensetsu-dx-manager.vercel.app</span><span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+            <li><a href="https://github.com/tono3679-creator/kensetsu-dx-manager" target="_blank" rel="noopener"><span>GitHub</span><span class="url">github.com/tono3679-creator/kensetsu-dx-manager</span><span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+          </ul>
+          <p class="demo-note">ログイン画面の「デモアカウントでログイン」から、管理者・現場責任者・一般スタッフの各役割で操作できます。データは毎日 4:00（日本時間）に初期状態へ戻ります。</p>
+        </div>
+      </section>
+
+      <nav class="next-project" aria-label="次の制作実績">
+        <a href="../../works/delivery-manager/">
+          <span class="label">Next — No. 01</span>
+          <span class="next-title">Delivery Manager <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><small>&copy; 2026 YU.</small></p>
+      <a class="u" href="#top">ページの先頭へ</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
