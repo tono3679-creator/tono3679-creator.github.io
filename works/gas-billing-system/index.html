@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>見積・請求・入金管理 | YU Portfolio</title>
+<meta name="description" content="Google スプレッドシートと Apps Script で作った、中小企業向けの見積・請求・入金管理システム。見積書・請求書の PDF 作成、ドライブ保存、メール下書き、入金管理、未入金アラート、売上ダッシュボードまでをスプレッドシート1つで行います。">
+<link rel="canonical" href="https://tono3679-creator.github.io/works/gas-billing-system/">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YU Portfolio">
+<meta property="og:title" content="見積・請求・入金管理 | YU Portfolio">
+<meta property="og:description" content="Google スプレッドシートと Apps Script で作った、中小企業向けの見積・請求・入金管理システム。見積書・請求書の PDF 作成、ドライブ保存、メール下書き、入金管理、未入金アラート、売上ダッシュボードまでをスプレッドシート1つで行います。">
+<meta property="og:url" content="https://tono3679-creator.github.io/works/gas-billing-system/">
+<meta property="og:image" content="https://tono3679-creator.github.io/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../../" aria-label="YU（Web Application Developer）トップページ"><span class="logo-name">YU</span><span class="logo-role" aria-hidden="true">Web Application Developer</span></a>
+    <nav class="nav" aria-label="メイン">
+      <ul>
+        <li><a class="u" href="../../#work" aria-current="page">Work</a></li>
+        <li><a class="u" href="../../#about">About</a></li>
+        <li><a class="u" href="../../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article aria-labelledby="project-title">
+    <div class="container">
+      <p class="back"><a class="u" href="../../#work">← 制作実績一覧へ</a></p>
+      <header class="project-head grid">
+        <span class="no">No. 06</span>
+        <h1 class="project-title" id="project-title">見積・請求・入金管理</h1>
+        <p class="project-lead">いつもの Google スプレッドシートのまま、<span class="nb">見積から入金確認までを</span><span class="nb">自動化する業務ツールです。</span></p>
+        <dl class="facts">
+          <div><dt class="label">Client</dt><dd>請求書を自社で発行する中小企業・個人事業主（制作会社・コンサル・工務店など）</dd></div>
+          <div><dt class="label">Users</dt><dd>経理・営業事務の担当者<br>（Google スプレッドシート）</dd></div>
+          <div><dt class="label">Platform</dt><dd>Google スプレッドシート＋<br>Google Apps Script</dd></div>
+        </dl>
+        <p class="project-actions">
+          <a class="button" href="https://github.com/tono3679-creator/gas-billing-system" target="_blank" rel="noopener">GitHub でソースコードを見る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+        </p>
+      </header>
+      <figure class="project-hero">
+        <div class="frame"><img src="../../images/gas-billing-dashboard.webp" width="1200" height="594" alt="スプレッドシートのダッシュボード。今月の売上・見積中・未入金残高・期限超過の指標と、月別の売上と入金のグラフ" decoding="async" fetchpriority="high"></div>
+      </figure>
+
+      <section class="block grid" aria-labelledby="s-overview">
+        <div class="block-title"><span class="label">Overview</span><h2 id="s-overview">プロジェクト概要</h2></div>
+        <div class="block-body">
+          <p class="large">顧客・商品のマスタ、売上の入力、見積書・請求書の PDF 作成、Google ドライブへの保存、メールの下書き、入金の管理、未入金のアラート、売上のダッシュボードまでを、Google スプレッドシート1つで行える業務自動化ツールです。</p>
+          <p class="large">新しいシステムを導入しなくても、普段使っているスプレッドシートのメニューから操作できるようにしました。DX の最初の一歩として、Excel の手作業をそのまま置き換えられることを目指しています。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-problem">
+        <div class="block-title"><span class="label">Problem</span><h2 id="s-problem">想定した業務課題</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>Excel のひな形に顧客名や明細を毎回書き写して、見積書・請求書を作っている</li>
+            <li>PDF の保存先やファイル名がバラバラで、過去の書類を探すのに時間がかかる</li>
+            <li>請求書をメールで送る準備（宛名・本文・添付）が毎回の手作業になっている</li>
+            <li>入金の確認を通帳と見比べて行い、支払期限を過ぎた請求に気づくのが遅れる</li>
+            <li>月別・顧客別の売上を出すために、月末に集計し直している</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-solution">
+        <div class="block-title"><span class="label">Solution</span><h2 id="s-solution">解決方法</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>案件で顧客を、明細で商品を選ぶだけで、単価・税率・金額・消費税・合計が自動で入ります。</li>
+            <li>見積書・請求書はボタン1つで番号を振って PDF にし、「請求書 › 2026-11」のように月別のフォルダへ自動で保存します。</li>
+            <li>PDF を添付した Gmail の下書きを自動で作ります。送信はせず、担当者が確認してから送る運用です。</li>
+            <li>支払期限は顧客ごとの支払条件（月末締め翌月末払い など）から自動で計算し、期限を過ぎた請求は赤で表示して、督促メールの下書きもまとめて作れます。</li>
+            <li>ダッシュボードで、今月の売上・未入金残高・期限超過と、月別・顧客別の売上を自動で集計します。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-impact">
+        <div class="block-title"><span class="label">Impact</span><h2 id="s-impact">導入効果の試算</h2></div>
+        <div class="block-body">
+          <p class="premise">従業員10名ほどで、月に見積20件・請求30件を発行する会社を想定した試算です。作業ごとの時間と、人件費の時間単価 2,500円（経理・事務担当）は、このページで置いた想定です。</p>
+          <dl class="figures">
+            <div><dt>削減できる作業時間</dt><dd><span class="fig">月 18</span>時間<span class="sub">月 24時間 → 月 6時間</span></dd></div>
+            <div><dt>年間の削減時間</dt><dd><span class="fig">216</span>時間<span class="sub">月 18時間 × 12か月</span></dd></div>
+            <div><dt>人件費に換算すると</dt><dd><span class="fig">約54</span>万円 / 年<span class="sub">月 約4.5万円（時間単価 2,500円）</span></dd></div>
+          </dl>
+          <div class="table-wrap">
+            <table class="impact-table">
+              <caption class="visually-hidden">作業ごとの月あたりの時間（導入前・導入後・削減）</caption>
+              <thead><tr><th scope="col">作業（1か月あたり）</th><th scope="col">導入前</th><th scope="col">導入後</th><th scope="col">削減</th></tr></thead>
+              <tbody>
+              <tr>
+                <th scope="row">見積書・請求書の作成と保存<span class="how">Excel に転記して PDF 化・保存 → 行を選んでボタン1つ</span></th>
+                <td data-label="導入前">10<small>時間</small></td>
+                <td data-label="導入後">2<small>時間</small></td>
+                <td data-label="削減" class="minus">−8<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">送付メールの準備<span class="how">宛名・本文・添付を毎回用意 → PDF 付きの下書きを自動作成</span></th>
+                <td data-label="導入前">3<small>時間</small></td>
+                <td data-label="導入後">1<small>時間</small></td>
+                <td data-label="削減" class="minus">−2<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">入金の確認と督促<span class="how">通帳と一覧を見比べる → 入金を記録すると状況が自動で変わり、期限超過を自動で表示</span></th>
+                <td data-label="導入前">6<small>時間</small></td>
+                <td data-label="導入後">2<small>時間</small></td>
+                <td data-label="削減" class="minus">−4<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">月次の売上集計<span class="how">月末に集計し直す → ダッシュボードで常に最新</span></th>
+                <td data-label="導入前">5<small>時間</small></td>
+                <td data-label="導入後">1<small>時間</small></td>
+                <td data-label="削減" class="minus">−4<small>時間</small></td>
+              </tr>
+              </tbody>
+              <tfoot><tr><th scope="row">合計</th><td data-label="導入前">24<small>時間</small></td><td data-label="導入後">6<small>時間</small></td><td data-label="削減" class="minus">−18<small>時間</small></td></tr></tfoot>
+            </table>
+          </div>
+          <p class="disclaimer">※ 実際の導入実績ではなく、上の想定条件にもとづく試算です。実際の効果は、業務の内容や運用によって変わります。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-features">
+        <div class="block-title"><span class="label">Features</span><h2 id="s-features">主要機能</h2></div>
+        <div class="block-body">
+          <dl class="features">
+            <div><dt>マスタ・売上入力</dt><dd>顧客（支払条件6種）と商品（税率10%・軽減税率8%）のマスタ。商品を選ぶと単位・単価・税率が自動で入り、金額と消費税は自動計算。</dd></div>
+            <div><dt>見積書・請求書の PDF</dt><dd>番号を自動で採番し、支払期限を自動計算。インボイス制度の記載事項（登録番号・税率ごとの合計と消費税）に対応。</dd></div>
+            <div><dt>ドライブ保存・メール下書き</dt><dd>月別フォルダへ自動保存。PDF を添付した見積・請求・督促メールを Gmail の下書きに作成（自動送信はしない）。</dd></div>
+            <div><dt>入金管理・未入金アラート</dt><dd>分割入金にも対応し、未入金・一部入金・入金済・期限超過を自動判定。開いたときの通知、毎朝の自動チェック。</dd></div>
+            <div><dt>ダッシュボード</dt><dd>今月の売上・見積中・未入金残高・期限超過の指標と、月別の売上と入金、顧客別の売上ランキング。</dd></div>
+            <div><dt>操作パネル・セルフテスト</dt><dd>サイドバーから PDF 作成・下書き・入金記録をボタンで操作。シートの数式とプログラムの計算が一致するかを14項目で自己診断。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="s-shots">
+        <div class="grid"><div class="block-title"><span class="label">Screens</span><h2 id="s-shots">スクリーンショット</h2></div></div>
+        <div class="shots">
+        <figure class="shot">
+          <div class="frame"><img src="../../images/gas-billing-documents.webp" width="1200" height="750" alt="自動で作成される見積書と請求書。請求書には振込先と、税率ごとの合計・消費税が入る" decoding="async" loading="lazy"></div>
+          <figcaption>自動で作成される見積書と請求書。軽減税率の品目には※が付き、税率ごとの消費税を表示する</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-stack">
+        <div class="block-title"><span class="label">Tech</span><h2 id="s-stack">使用技術</h2></div>
+        <div class="block-body">
+          <ul class="stack" aria-label="使用技術">
+            <li>Google スプレッドシート</li>
+            <li>Google Apps Script（V8）</li>
+            <li>clasp</li>
+            <li>Google ドライブ・Gmail（下書き）</li>
+            <li>HtmlService（PDF 生成・操作パネル）</li>
+            <li>Node.js（node:test）</li>
+            <li>Playwright</li>
+          </ul>
+          <ul class="points" aria-label="設計のポイント">
+            <li>シートは数式で即時に計算し、PDF に載せる金額はプログラム側で計算します。セルフテストで両方が一致するかを照合し、実機で見つけた集計の不具合もこの仕組みで発見しました。</li>
+            <li>消費税は、インボイス制度に合わせて税率ごとに1回だけ端数を処理し、浮動小数の誤差が出ないよう整数で計算しています。</li>
+            <li>顧客へのメールは自動送信せず、下書きまでにとどめています。業務ロジックは Google のサービスに依存しない関数に分け、Node.js で単体テストと通しテストを行っています。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-links">
+        <div class="block-title"><span class="label">Links</span><h2 id="s-links">ソースコード</h2></div>
+        <div class="block-body">
+          <ul class="links-list">
+            <li><a href="https://github.com/tono3679-creator/gas-billing-system" target="_blank" rel="noopener"><span>GitHub</span><span class="url">github.com/tono3679-creator/gas-billing-system</span><span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+          </ul>
+          <p class="demo-note">clasp を使うと、デモデータ入りのスプレッドシートをご自身の Google アカウントに作成できます（手順は GitHub の docs/SETUP.md）。デモの会社・顧客はすべて架空で、顧客のメールアドレスは届かない予約ドメインにしています。</p>
+        </div>
+      </section>
+
+      <nav class="next-project" aria-label="次の制作実績">
+        <a href="../../works/delivery-manager/">
+          <span class="label">Next — No. 01</span>
+          <span class="next-title">Delivery Manager <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><small>&copy; 2026 YU</small></p>
+      <a class="u" href="#top">ページの先頭へ</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

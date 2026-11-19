@@ -9,7 +9,7 @@
 | パス | 内容 |
 | --- | --- |
 | `index.html` | トップページ（ファーストビュー・制作実績・自己紹介・お問い合わせ） |
-| `works/<作品>/index.html` | 作品ごとの詳細ページ（delivery-manager / reserveflow / kensetsu-dx-manager / flowdesk / invoice-manager） |
+| `works/<作品>/index.html` | 作品ごとの詳細ページ（delivery-manager / reserveflow / kensetsu-dx-manager / flowdesk / invoice-manager / gas-billing-system） |
 | `assets/css/style.css` | 全ページ共通のスタイル |
 | `images/` | 作品のスクリーンショットと OGP 画像（`og.jpg`） |
 | `404.html` / `sitemap.xml` / `robots.txt` / `favicon.svg` | その他 |
