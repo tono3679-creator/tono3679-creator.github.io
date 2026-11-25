@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocFlow | YU Portfolio</title>
+<meta name="description" content="中小企業向けの帳票・書類処理システム。PDF やスキャン画像の請求書・領収書・納品書から項目を読み取り、確認が必要な項目だけを原本の上に示します。金額の照合と重複の検出を行い、人が確定した値だけを Excel・CSV に出力します。">
+<link rel="canonical" href="https://tono3679-creator.github.io/works/docflow/">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="YU Portfolio">
+<meta property="og:title" content="DocFlow | YU Portfolio">
+<meta property="og:description" content="中小企業向けの帳票・書類処理システム。PDF やスキャン画像の請求書・領収書・納品書から項目を読み取り、確認が必要な項目だけを原本の上に示します。金額の照合と重複の検出を行い、人が確定した値だけを Excel・CSV に出力します。">
+<meta property="og:url" content="https://tono3679-creator.github.io/works/docflow/">
+<meta property="og:image" content="https://tono3679-creator.github.io/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../../" aria-label="YU（Web Application Developer）トップページ"><span class="logo-name">YU</span><span class="logo-role" aria-hidden="true">Web Application Developer</span></a>
+    <nav class="nav" aria-label="メイン">
+      <ul>
+        <li><a class="u" href="../../#work" aria-current="page">Work</a></li>
+        <li><a class="u" href="../../#about">About</a></li>
+        <li><a class="u" href="../../#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article aria-labelledby="project-title">
+    <div class="container">
+      <p class="back"><a class="u" href="../../#work">← 制作実績一覧へ</a></p>
+      <header class="project-head grid">
+        <span class="no">No. 08</span>
+        <h1 class="project-title" id="project-title">DocFlow</h1>
+        <p class="project-lead">請求書・領収書・納品書を読み取り、<span class="nb">確認が必要な項目だけを</span><span class="nb">原本の上に示す</span>帳票・書類処理システムです。</p>
+        <dl class="facts">
+          <div><dt class="label">Client</dt><dd>取引先から届く請求書・領収書・納品書を手で入力している中小企業（経理・総務・購買）</dd></div>
+          <div><dt class="label">Users</dt><dd>管理者・担当者・閲覧者<br>（PC・スマートフォン）</dd></div>
+          <div><dt class="label">Demo</dt><dd>登録不要。訪問者ごとに<br>専用のデモ会社を作成</dd></div>
+        </dl>
+        <p class="project-actions">
+          <a class="button" href="https://docflow-mu-beige.vercel.app" target="_blank" rel="noopener">デモを触る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+          <a class="text-link" href="https://github.com/tono3679-creator/docflow" target="_blank" rel="noopener">GitHub でソースコードを見る <span class="arrow arrow--out" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a>
+        </p>
+      </header>
+      <figure class="project-hero">
+        <div class="frame"><img src="../../images/docflow-review.webp" width="1200" height="750" alt="DocFlow の確認画面。左にスキャンした請求書の原本、右に読み取った項目。読み取りに自信のない項目に黄色の印が付いている" decoding="async" fetchpriority="high"></div>
+      </figure>
+
+      <section class="block grid" aria-labelledby="s-overview">
+        <div class="block-title"><span class="label">Overview</span><h2 id="s-overview">プロジェクト概要</h2></div>
+        <div class="block-body">
+          <p class="large">PDF やスキャン画像の請求書・領収書・納品書から、発行元・番号・日付・金額・明細を読み取り、確認が必要な項目だけを原本の位置に印を付けて示す、中小企業向けの帳票・書類処理システムです。人が確認して確定した値だけを Excel・CSV に出力します。</p>
+          <p class="large">読み取れない項目は推測で埋めず、空欄のまま「未取得」と示します。読み取りに自信がない項目は黄色、金額の計算が合わない項目は赤で示し、確認事項が残っている書類は確定できません。読み取りの結果をそのまま信じず、人が確かめることを前提に設計しています。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-problem">
+        <div class="block-title"><span class="label">Problem</span><h2 id="s-problem">想定した業務課題</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>届いた請求書を、会計ソフトや Excel に1件ずつ手で入力している</li>
+            <li>OCR や AI で読み取っても、結局すべての項目を原本と見比べている</li>
+            <li>金額の検算（数量×単価・小計・消費税）に時間がかかる</li>
+            <li>同じ請求書を二重に計上しそうになる</li>
+            <li>だれが・いつ・どの値を直したのか、後から分からない</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-solution">
+        <div class="block-title"><span class="label">Solution</span><h2 id="s-solution">解決方法</h2></div>
+        <div class="block-body">
+          <ol class="numbered">
+            <li>PDF・スキャン画像をまとめてアップロードすると、PDF は文字情報、画像は OCR で読み取り、種別（請求書・領収書・納品書）を判定して項目を入力欄に入れておきます。</li>
+            <li>読み取りに自信がない項目は黄色、計算が合わない項目は赤で、原本の位置に印を付けます。項目を押すと原本のその位置へ、原本の印を押すと項目へ移動します。</li>
+            <li>数量×単価・明細の合計・税率ごとの消費税・合計を自動で照合します。値が足りず確かめられないときは「検証不能」と示します。</li>
+            <li>同じファイル・同じ番号・発行日と金額が同じ書類を重複の候補として示し、自動では消さずに人が判断します。</li>
+            <li>修正前後の値・承認の理由・確定した人と日時を履歴に残し、確定したときの値を保存します。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-impact">
+        <div class="block-title"><span class="label">Impact</span><h2 id="s-impact">導入効果の試算</h2></div>
+        <div class="block-body">
+          <p class="premise">書類が月300件（1件あたり約5分の手作業）の会社を想定（アプリの紹介ページの試算と同じ条件で、合計は月25時間 → 月8時間）。人件費の時間単価 2,500円（経理の担当者）は、このページで置いた想定です。</p>
+          <dl class="figures">
+            <div><dt>削減できる作業時間</dt><dd><span class="fig">月 17</span>時間<span class="sub">月 25時間 → 月 8時間</span></dd></div>
+            <div><dt>年間の削減時間</dt><dd><span class="fig">204</span>時間<span class="sub">月 17時間 × 12か月</span></dd></div>
+            <div><dt>人件費に換算すると</dt><dd><span class="fig">約51</span>万円 / 年<span class="sub">月 約4.3万円（時間単価 2,500円）</span></dd></div>
+          </dl>
+          <div class="table-wrap">
+            <table class="impact-table">
+              <caption class="visually-hidden">作業ごとの月あたりの時間（導入前・導入後・削減）</caption>
+              <thead><tr><th scope="col">作業（1か月あたり）</th><th scope="col">導入前</th><th scope="col">導入後</th><th scope="col">削減</th></tr></thead>
+              <tbody>
+              <tr>
+                <th scope="row">書類の仕分け・ファイル名の整理<span class="how">種類ごとにフォルダへ分けて名前を付け直す → アップロードすると種別を判定し、発行元・番号で検索できる</span></th>
+                <td data-label="導入前">3<small>時間</small></td>
+                <td data-label="導入後">0.5<small>時間</small></td>
+                <td data-label="削減" class="minus">−2.5<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">項目の入力<span class="how">原本を見ながら会計ソフト・Excel に手で入力 → 読み取った値を確認し、違うところだけ直して Excel・CSV に出力</span></th>
+                <td data-label="導入前">15<small>時間</small></td>
+                <td data-label="導入後">4<small>時間</small></td>
+                <td data-label="削減" class="minus">−11<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">金額の検算<span class="how">電卓で数量×単価・消費税を計算 → 自動の照合で、合わない箇所だけを確認</span></th>
+                <td data-label="導入前">4<small>時間</small></td>
+                <td data-label="導入後">1.5<small>時間</small></td>
+                <td data-label="削減" class="minus">−2.5<small>時間</small></td>
+              </tr>
+              <tr>
+                <th scope="row">重複・漏れの確認<span class="how">過去の書類を探して目で確認 → 重複の候補を見て「重複として除外」か「重複ではない」を選ぶ</span></th>
+                <td data-label="導入前">3<small>時間</small></td>
+                <td data-label="導入後">2<small>時間</small></td>
+                <td data-label="削減" class="minus">−1<small>時間</small></td>
+              </tr>
+              </tbody>
+              <tfoot><tr><th scope="row">合計</th><td data-label="導入前">25<small>時間</small></td><td data-label="導入後">8<small>時間</small></td><td data-label="削減" class="minus">−17<small>時間</small></td></tr></tfoot>
+            </table>
+          </div>
+          <p class="disclaimer">※ 実際の導入実績ではなく、上の想定条件にもとづく試算です。実際の効果は、書類の種類・画質や運用によって変わります。読み取りは間違えることがあるため、どの書類も人が確認して確定する前提です。</p>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-features">
+        <div class="block-title"><span class="label">Features</span><h2 id="s-features">主要機能</h2></div>
+        <div class="block-body">
+          <dl class="features">
+            <div><dt>読み取り</dt><dd>PDF の文字と位置、画像・スキャンは OCR（サーバーの中で処理し、外部に送らない）。種別を判定し、読めない項目は推測で埋めず空欄のまま示す。</dd></div>
+            <div><dt>確認画面</dt><dd>左に原本（拡大・回転・複数ページ）、右に確認事項・項目・明細・金額の照合。項目と原本の位置が連動し、スマホは「原本／項目」のタブで切り替える。</dd></div>
+            <div><dt>金額の照合</dt><dd>数量×単価・明細の合計・税率ごとの消費税（8%・10% の混在、値引き・送料）・合計を照合し、一致／不一致／検証不能で示す。</dd></div>
+            <div><dt>重複の検出</dt><dd>同じファイル・同じ番号・同じ発行日と金額の書類を候補として表示。自動では消さず、人が判断する。</dd></div>
+            <div><dt>確定・履歴・出力</dt><dd>確認事項が残る書類は確定できない。確定時の値と修正の履歴を記録し、Excel（種別ごとのシート＋明細）と CSV に出力。</dd></div>
+            <div><dt>役割と権限</dt><dd>管理者・担当者・閲覧者。担当者が確定できる金額の上限や、要確認にする信頼度を設定で変えられる。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="s-shots">
+        <div class="grid"><div class="block-title"><span class="label">Screens</span><h2 id="s-shots">スクリーンショット</h2></div></div>
+        <div class="shots">
+        <figure class="shot">
+          <div class="frame"><img src="../../images/docflow-mismatch.webp" width="1200" height="750" alt="金額の照合。小計と消費税の合計が請求金額と合わない請求書で、原本の該当箇所と照合の結果が赤で示されている" decoding="async" loading="lazy"></div>
+          <figcaption>金額の照合。計算が合わない請求書は赤で示し、理由を付けて承認しないと確定できない</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="../../images/docflow-documents.webp" width="1200" height="750" alt="書類の一覧。要確認・確認待ち・処理済みなどの状態のタブと、発行元・番号・発行日・合計の列" decoding="async" loading="lazy"></div>
+          <figcaption>書類の一覧。状態で分けて検索・絞り込みし、まとめて Excel・CSV に出力できる</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame phones">
+            <div><img src="../../images/docflow-m-review.webp" width="780" height="1688" alt="スマートフォンの確認画面（原本）" decoding="async" loading="lazy"></div>
+            <div><img src="../../images/docflow-m-fields.webp" width="780" height="1688" alt="スマートフォンの確認画面（項目）" decoding="async" loading="lazy"></div>
+          </div>
+          <figcaption>スマートフォンの画面。「原本／項目」のタブで切り替え、「原本で見る」でその位置を示す</figcaption>
+        </figure>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-stack">
+        <div class="block-title"><span class="label">Tech</span><h2 id="s-stack">使用技術</h2></div>
+        <div class="block-body">
+          <ul class="stack" aria-label="使用技術">
+            <li>Next.js 16（App Router・Server Actions）</li>
+            <li>React 19</li>
+            <li>TypeScript</li>
+            <li>PostgreSQL 16（Neon）</li>
+            <li>Tailwind CSS 4</li>
+            <li>Radix UI</li>
+            <li>pdf.js</li>
+            <li>Tesseract.js（OCR）</li>
+            <li>sharp</li>
+            <li>ExcelJS</li>
+            <li>React Hook Form・Zod</li>
+            <li>Vitest</li>
+            <li>Playwright</li>
+            <li>Vercel</li>
+          </ul>
+          <ul class="points" aria-label="設計のポイント">
+            <li>書類の値の変更と確定はデータベースの関数だけが行い、版番号で同時編集による上書きを防ぎます。確定の条件（未確認の確認事項・重複の判断・担当者の金額の上限）もデータベース側で確かめます。</li>
+            <li>会社ごとのデータは PostgreSQL の行レベルセキュリティ（RLS）で分け、ファイルは非公開の領域に置いて、権限のある人にだけ返します。スクリプトや添付ファイルを含む PDF、展開すると巨大になる画像は受け付けません。</li>
+            <li>外部の AI（Claude API）での項目の取り出しは任意で、既定はオフです。使う場合も原本の文字に根拠のある値だけを採用し、口座番号・電話番号は伏せて送ります。</li>
+            <li>架空のデモ書類 37 件で精度を実測しています。文字情報のある PDF の見出しの項目は 220 / 220、スキャン画像・写真は 85 / 99（ピンぼけで読めない画像 1 件を含む）、書かれていない値を埋めた件数は 0 です。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block grid" aria-labelledby="s-links">
+        <div class="block-title"><span class="label">Links</span><h2 id="s-links">デモ・ソースコード</h2></div>
+        <div class="block-body">
+          <ul class="links-list">
+            <li><a href="https://docflow-mu-beige.vercel.app" target="_blank" rel="noopener"><span>デモ</span><span class="url">docflow-mu-beige.vercel.app</span> <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+            <li><a href="https://github.com/tono3679-creator/docflow" target="_blank" rel="noopener"><span>GitHub</span><span class="url">github.com/tono3679-creator/docflow</span> <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden">（新しいタブで開きます）</span></a></li>
+          </ul>
+          <p class="demo-note">登録は不要です。紹介ページの「デモを試す」、またはログイン画面で役割（管理者・担当者・閲覧者）を選ぶと、訪問者ごとに専用のデモ会社（架空の会社「株式会社山田商事」と、取引先の架空の書類 37 件）が作られ、24時間後に自動で削除されます。デモの書類は事前に読み取った結果で、デモでアップロードした書類はその場で読み取ります。画面上部の「体験の流れ」から、要確認の書類を開く → 原本と見比べて直す → 確定 → 出力 までを3〜5分で辿れます。</p>
+        </div>
+      </section>
+
+      <nav class="next-project" aria-label="次の制作実績">
+        <a href="../../works/delivery-manager/">
+          <span class="label">Next — No. 01</span>
+          <span class="next-title">Delivery Manager <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p><small>&copy; 2026 YU</small></p>
+      <a class="u" href="#top">ページの先頭へ</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
